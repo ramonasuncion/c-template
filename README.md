@@ -6,6 +6,7 @@ Resources
 
 - [linux coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html)
 - [c style](https://github.com/mcinglis/c-style)
+- [fuzzy testing](https://nullprogram.com/blog/2025/02/05/) - to be added
 
 Guide
 
