@@ -2,7 +2,7 @@
 CFLAGS = -Isrc -std=c11 -O2 -Wall -Wextra # -g -DDEBUG
 
 # Uncomment for C++
-#CXXFLAGS = -Isrc -std=c++20 -O2 -Wall -Wextra # -g -DDEBUG
+#CXXFLAGS = -Isrc -std=c++17 -O2 -Wall -Wextra # -g -DDEBUG
 
 CFLAGS += -Wall -Wextra -Wpedantic \
           -Wformat=2 -Wno-unused-parameter -Wshadow \
@@ -31,11 +31,11 @@ main: $(OBJS) | mkbin
 #main: $(OBJS_CPP) | mkbin
 #	$(CXX) $(CXXFLAGS) $^ -o $(BIN)/main
 
-$(BIN)/%.o: $(SRC)/%.c
+$(BIN)/%.o: $(SRC)/%.c | mkbin
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Uncomment for C++
-#$(BIN)/%.o: $(SRC)/%.cpp
+#$(BIN)/%.o: $(SRC)/%.cpp | mkbin
 #	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 mkbin:
